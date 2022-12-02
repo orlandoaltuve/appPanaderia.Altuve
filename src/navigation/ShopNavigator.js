@@ -9,7 +9,7 @@ const Stack = createNativeStackNavigator();
 
 export default ShopNavigator = () => {
     return (
-        <NavigationContainer>
+       
             <Stack.Navigator initialRouteName="Categories" screenOptions={{
                 headerStyle: { backgroundColor: COLORS.primary },
                 headerTintColor: COLORS.secundary,
@@ -32,6 +32,6 @@ export default ShopNavigator = () => {
                         title: route.params.name,
                     })} />
             </Stack.Navigator>
-        </NavigationContainer>
+     
     )
 }

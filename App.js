@@ -1,6 +1,7 @@
 
 import {useFonts} from "expo-font"
 import ShopNavigator from './src/navigation/ShopNavigator';
+import BottonTapNavigator from "./src/navigation/BottonTapNavigator";
 
 export default function App() {
 const [fontsLoaded]=useFonts({
@@ -10,6 +11,6 @@ const [fontsLoaded]=useFonts({
 if(!fontsLoaded){
   return null
 }
-  return<ShopNavigator/>;
+  return<BottonTapNavigator/>;
 }
 
