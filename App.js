@@ -1,7 +1,8 @@
 
 import {useFonts} from "expo-font"
-import ShopNavigator from './src/navigation/ShopNavigator';
 import BottonTabNavigator from "./src/navigation/BottonTabNavigator";
+import { Provider } from "react-redux";
+import store from "./src/store";
 
 export default function App() {
 const [fontsLoaded]=useFonts({
@@ -11,6 +12,10 @@ const [fontsLoaded]=useFonts({
 if(!fontsLoaded){
   return null
 }
-  return<BottonTabNavigator/>;
+  return(
+  <Provider store={store}>
+    <BottonTabNavigator/>
+  </Provider>
+  )
 }
 
