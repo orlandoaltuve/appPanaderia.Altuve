@@ -1,9 +1,10 @@
-import { StyleSheet,View, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import ShopNavigator from './ShopNavigator';
 import CartNavigator from './CartNavigator';
 import { NavigationContainer } from "@react-navigation/native";
+import OrderNavigator from './OrderNavigator';
 
 
 
@@ -20,18 +21,26 @@ export default BootomTabNavigator = () => {
                     tabBarStyle: styles.tabBar,
                 }}>
                 <BottomTabs.Screen name="ShopTab" component={ShopNavigator} options={{
-                    tabBarIcon:({focus}) => (
+                    tabBarIcon: ({ focus }) => (
                         <View style={styles.item}>
-                            <Ionicons name='home' size={20} color="black"/>
+                            <Ionicons name='home' size={20} color="black" />
                             <Text>Tienda</Text>
                         </View>
                     )
                 }} />
                 <BottomTabs.Screen name="CartTab" component={CartNavigator} options={{
-                    tabBarIcon:({focus}) => (
+                    tabBarIcon: ({ focus }) => (
                         <View style={styles.item}>
-                            <Ionicons name='cart' size={20} color="black"/>
+                            <Ionicons name='cart' size={20} color="black" />
                             <Text>Carrito</Text>
+                        </View>
+                    )
+                }} />
+                <BottomTabs.Screen name="OrdersTab" component={OrderNavigator} options={{
+                    tabBarIcon: ({ focus }) => (
+                        <View style={styles.item}>
+                            <Ionicons name='list' size={20} color="black" />
+                            <Text>Ordenes</Text>
                         </View>
                     )
                 }} />
